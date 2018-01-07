@@ -151,6 +151,13 @@ public class UserResource {
         return Response.noContent().build();
     }
 
+    @POST
+    @Path("login")
+    @Counted(name = "login_counter")
+    public Response login(User user) {
+        return Response.ok("TOKEN").build();
+    }
+
     @DELETE
     @Path("{id}")
     @Counted(name = "user_delete_counter")
