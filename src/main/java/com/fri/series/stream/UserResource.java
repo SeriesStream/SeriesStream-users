@@ -39,7 +39,7 @@ public class UserResource {
     //private String baseUrl;
 
     @Inject
-    @DiscoverService("series-stream-raittings")
+    @DiscoverService("series-stream-rattings")
     private Provider<Optional<String>> raittingsBaseProvider;
 
     private Client httpClient = ClientBuilder.newClient();
