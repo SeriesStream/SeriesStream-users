@@ -3,10 +3,10 @@ kumuluzee:
   env:
     name: dev
   version: 0.0.3
-  #server:
-  #  http:
-  #    port: 32448
-  #  base-url: http://159.8.79.87:32448
+  server:
+    http:
+      port: 32448
+    base-url: http://159.8.79.87:32448
   config:
     etcd:
       hosts: http://159.8.79.87:30024
@@ -43,11 +43,11 @@ kumuluzee:
         timeout:
           value: 4500ms
         circuit-breaker:
-          request-volume-threshold: 60
+          request-volume-threshold: 50
           failure-ratio: 0.3
           metrics:
             rolling-window:
-              size: 8s
+              size: 6s
               buckets: 4
   logs:
       config-file: '<?xml version="1.0" encoding="UTF-8"?>
