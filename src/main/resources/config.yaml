@@ -2,10 +2,8 @@ kumuluzee:
   name: series-stream-users
   env:
     name: dev
-  version: 0.0.4
+  version: 0.0.5
   server:
-    http:
-      port: 32448
     base-url: http://159.8.79.87:32448
   config:
     etcd:
