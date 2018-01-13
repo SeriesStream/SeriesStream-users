@@ -2,7 +2,11 @@ kumuluzee:
   name: series-stream-users
   env:
     name: dev
-  version: 0.0.2
+  version: 0.0.3
+  #server:
+  #  http:
+  #    port: 32448
+  #  base-url: http://159.8.79.87:32448
   config:
     etcd:
       hosts: http://159.8.79.87:30024
@@ -37,9 +41,9 @@ kumuluzee:
               buckets: 4
       find-episodes:
         timeout:
-          value: 2500ms
+          value: 4500ms
         circuit-breaker:
-          request-volume-threshold: 30
+          request-volume-threshold: 60
           failure-ratio: 0.3
           metrics:
             rolling-window:
@@ -65,3 +69,7 @@ kumuluzee:
                             </Root>
                         </Loggers>
                     </Configuration>'
+rest-config:
+  login-required: false
+  password-min-length: 6
+  other: 1
